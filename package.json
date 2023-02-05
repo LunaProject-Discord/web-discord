@@ -1,0 +1,29 @@
+{
+    "name": "@lunaproject-discord/web-discord",
+    "version": "1.0.0",
+    "packageManager": "yarn@3.4.1",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/LunaProject-Discord/web-discord.git"
+    },
+    "scripts": {
+        "build": "tsc"
+    },
+    "devDependencies": {
+        "@discordjs/rest": "1.5.0",
+        "@types/color": "3.0.3",
+        "@types/node": "18.11.18",
+        "color": "4.2.3",
+        "date-fns": "2.29.3",
+        "discord-api-types": "0.37.31",
+        "ts-loader": "9.4.2",
+        "ts-node": "10.9.1",
+        "tslint": "6.1.3",
+        "typescript": "4.9.5"
+    }
+}
