@@ -1,7 +1,30 @@
-import {APIGuild, APIRole} from 'discord-api-types/v10';
-import {APIGuildChannel, OAuthGuild} from '../interfaces';
+import { APIGuild, APIRole } from 'discord-api-types/v10';
+import { APIGuildChannel, OAuthGuild, OAuthUser } from '../interfaces';
 
-export const getGuildIcon = (guild: OAuthGuild | APIGuild) => guild.icon ? `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png` : 'https://cdn.discordapp.com/embed/avatars/0.png';
+export const CDN_BASE_URL = 'https://cdn.discordapp.com';
+
+type CdnImageFormat = 'jpg' | 'png' | 'gif' | 'webp';
+
+export const buildCdnUrl = (path: string, size?: number, format?: CdnImageFormat) => new URL(
+    `${path}${format ? `.${format}` : ''}${size ? `?size=${size}` : ''}`,
+    CDN_BASE_URL
+).toString();
+
+export const getUserAvatar = (user: OAuthUser, size?: number, format?: CdnImageFormat) => user.avatar ? buildCdnUrl(
+    `/avatars/${user.id}/${user.avatar}`,
+    size,
+    format
+) : buildCdnUrl(
+    `/embed/avatars/${Number(user.discriminator) % 5}`
+);
+
+export const getGuildIcon = (guild: OAuthGuild | APIGuild, size?: number, format?: CdnImageFormat) => guild.icon ? buildCdnUrl(
+    `/icons/${guild.id}/${guild.icon}`,
+    size,
+    format
+) : buildCdnUrl(
+    '/embed/avatars/0'
+);
 
 export const hasPermission = (guild: OAuthGuild | APIGuild, permission: number = 0x20) => guild.owner || (Number(guild.permissions) & permission) === permission;
 
