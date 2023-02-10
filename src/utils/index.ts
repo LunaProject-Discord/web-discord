@@ -15,7 +15,9 @@ export const getUserAvatar = (user: OAuthUser, size?: number, format?: CdnImageF
     size,
     format
 ) : buildCdnUrl(
-    `/embed/avatars/${Number(user.discriminator) % 5}`
+    `/embed/avatars/${Number(user.discriminator) % 5}`,
+    undefined,
+    'png'
 );
 
 export const getGuildIcon = (guild: OAuthGuild | APIGuild, size?: number, format?: CdnImageFormat) => guild.icon ? buildCdnUrl(
@@ -23,7 +25,9 @@ export const getGuildIcon = (guild: OAuthGuild | APIGuild, size?: number, format
     size,
     format
 ) : buildCdnUrl(
-    '/embed/avatars/0'
+    '/embed/avatars/0',
+    undefined,
+    'png'
 );
 
 export const hasPermission = (guild: OAuthGuild | APIGuild, permission: number = 0x20) => guild.owner || (Number(guild.permissions) & permission) === permission;
