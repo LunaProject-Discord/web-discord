@@ -1,15 +1,16 @@
-import {REST} from '@discordjs/rest';
-import {addSeconds} from 'date-fns';
-import {APIRole, Routes} from 'discord-api-types/v10';
-import {APIGuildChannel, Cache, OAuthGuild, OAuthUser} from '../interfaces';
+import { REST } from '@discordjs/rest';
+import { addSeconds } from 'date-fns';
+import { APIGuildMember, APIRole, Routes } from 'discord-api-types/v10';
+import { APIGuildChannel, Cache, OAuthGuild, OAuthUser } from '../interfaces';
 
-const rest = new REST({version: '10'}).setToken(process.env.DISCORD_BOT_TOKEN!!);
+export const RestClient = new REST({ version: '10' }).setToken(process.env.DISCORD_BOT_TOKEN!!);
 
 const cachedUsers = new Map<string, Cache<OAuthUser>>();
 const cachedGuilds = new Map<string, Cache<OAuthGuild[]>>();
 
 const cachedGuildChannels = new Map<string, Cache<APIGuildChannel[]>>();
 const cachedGuildRoles = new Map<string, Cache<APIRole[]>>();
+const cachedGuildMembers = new Map<string, Cache<APIGuildMember[]>>();
 
 export const getUser = async (token: string | undefined): Promise<OAuthUser | undefined> => {
     if (!token)
@@ -89,7 +90,7 @@ export const getGuildChannelsById = async (id: string): Promise<APIGuildChannel[
         return cached.data;
 
     try {
-        const channels = await rest.get(Routes.guildChannels(id)) as APIGuildChannel[];
+        const channels = await RestClient.get(Routes.guildChannels(id)) as APIGuildChannel[];
 
         cachedGuildChannels.set(
             id,
@@ -113,7 +114,7 @@ export const getGuildRolesById = async (id: string): Promise<APIRole[] | undefin
         return cached.data;
 
     try {
-        const roles = await rest.get(Routes.guildRoles(id)) as APIRole[];
+        const roles = await RestClient.get(Routes.guildRoles(id)) as APIRole[];
 
         cachedGuildRoles.set(
             id,
@@ -124,6 +125,48 @@ export const getGuildRolesById = async (id: string): Promise<APIRole[] | undefin
         );
 
         return roles;
+    } catch (e) {
+        return cached?.data ?? undefined;
+    }
+};
+
+export const getGuildMembersById = async (id: string): Promise<APIGuildMember[] | undefined> => {
+    const date = new Date();
+
+    const cached = cachedGuildMembers.get(id);
+    if (cached && cached.expired_at > date.getTime())
+        return cached.data;
+
+    try {
+        const params = new URLSearchParams({ 'limit': '1000' });
+
+        const members: APIGuildMember[] = [];
+
+        while (true) {
+            const guildMembers = await RestClient.get(
+                Routes.guildMembers(id),
+                { query: params }
+            ) as APIGuildMember[];
+
+            members.push(...guildMembers);
+
+            if (guildMembers.length < 1000)
+                break;
+
+            const lastMember = guildMembers[guildMembers.length - 1];
+            if (lastMember.user)
+                params.set('after', lastMember.user.id);
+        }
+
+        cachedGuildMembers.set(
+            id,
+            {
+                data: members,
+                expired_at: addSeconds(date, 120).getTime()
+            }
+        );
+
+        return members;
     } catch (e) {
         return cached?.data ?? undefined;
     }
