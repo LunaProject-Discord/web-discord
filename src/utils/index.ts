@@ -1,4 +1,4 @@
-import { APIGuild, APIRole } from 'discord-api-types/v10';
+import { APIGuild, APIRole, APIUser } from 'discord-api-types/v10';
 import { APIGuildChannel, OAuthGuild, OAuthUser } from '../interfaces';
 
 export const CDN_BASE_URL = 'https://cdn.discordapp.com';
@@ -10,7 +10,7 @@ export const buildCdnUrl = (path: string, size?: number, format?: CdnImageFormat
     CDN_BASE_URL
 ).toString();
 
-export const getUserAvatar = (user: OAuthUser, size?: number, format?: CdnImageFormat) => user.avatar ? buildCdnUrl(
+export const getUserAvatar = (user: OAuthUser | APIUser, size?: number, format?: CdnImageFormat) => user.avatar ? buildCdnUrl(
     `/avatars/${user.id}/${user.avatar}`,
     size,
     format
