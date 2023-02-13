@@ -1,11 +1,13 @@
 import {
     APIGuildCategoryChannel,
     APIGuildForumChannel,
+    APIGuildMember,
     APIGuildStageVoiceChannel,
     APIGuildVoiceChannel,
     APINewsChannel,
     APITextChannel,
-    APIThreadChannel
+    APIThreadChannel,
+    APIUser
 } from 'discord-api-types/v10';
 
 export interface OAuthUser {
@@ -46,3 +48,7 @@ export declare type APIGuildChannel =
     | APIGuildStageVoiceChannel
     | APIGuildForumChannel
     | APIThreadChannel;
+
+export interface GuildMember extends Omit<APIGuildMember, 'user'> {
+    user: APIUser;
+}
