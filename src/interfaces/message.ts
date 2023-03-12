@@ -34,6 +34,7 @@ export interface EmbedAuthor {
 }
 
 export interface EmbedField {
+    _id?: string;
     name: string;
     value: string;
     inline: boolean;
