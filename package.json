@@ -1,6 +1,6 @@
 {
     "name": "@lunaproject-discord/web-discord",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "packageManager": "yarn@3.5.0",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
