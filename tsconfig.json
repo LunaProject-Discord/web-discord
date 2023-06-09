@@ -22,18 +22,6 @@
         "noImplicitThis": true,
         "strictNullChecks": true,
         "downlevelIteration": true,
-        "baseUrl": ".",
-        "paths": {
-            "@interfaces/*": [
-                "src/interfaces/*"
-            ],
-            "@libs/*": [
-                "src/libs/*"
-            ],
-            "@utils/*": [
-                "src/utils/*"
-            ]
-        },
         "types": [
             "node"
         ],
