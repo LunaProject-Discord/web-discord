@@ -3,7 +3,10 @@ import { APIGuildChannel, OAuthGuild } from '../interfaces';
 
 export * from './cdn';
 
-export const hasPermission = (guild: OAuthGuild | APIGuild, permission: number = 0x20) => guild.owner || (Number(guild.permissions) & permission) === permission;
+export const getRoleColor = (role: APIRole) => {
+    const hexColor = role.color.toString(16).padStart(6, '0');
+    return `#${hexColor !== '1fffffff' ? hexColor : '99aab5'}`;
+};
 
 export const sortOAuthGuilds = (guilds: OAuthGuild[]) => (guilds?.slice() ?? []).sort((a, b) => a.name.localeCompare(b.name));
 
