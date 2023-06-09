@@ -11,7 +11,7 @@ export const someCheckPermissions = (guild: OAuthGuild | APIGuild, ...permission
 export const everyCheckPermissions = (guild: OAuthGuild | APIGuild, ...permissions: bigint[]) => guild.owner || permissions.every((permission) => checkPermission(guild.permissions, permission));
 
 
-export const getUserDisplayName = (user: APIUser | OAuthUser) => user.global_name ?? user.username;
+export const getUserDisplayName = (user: OAuthUser | APIUser) => user.global_name ?? user.username;
 
 export const getMemberDisplayName = (member: GuildMember) => member.nick ?? getUserDisplayName(member.user);
 
@@ -22,9 +22,7 @@ export const getRoleColor = (role: APIRole) => {
 };
 
 
-export const sortOAuthGuilds = (guilds: OAuthGuild[]) => (guilds?.slice() ?? []).sort((a, b) => a.name.localeCompare(b.name));
-
-export const sortGuilds = (guilds: APIGuild[]) => (guilds?.slice() ?? []).sort((a, b) => a.name.localeCompare(b.name));
+export const sortGuilds = (guilds: (OAuthGuild | APIGuild)[]) => (guilds?.slice() ?? []).sort((a, b) => a.name.localeCompare(b.name));
 
 export const sortChannels = (channels: APIGuildChannel[]) => (channels?.slice() ?? []).sort((a, b) => a.position - b.position);
 
@@ -33,7 +31,7 @@ export const sortRoles = (roles: APIRole[]) => (roles?.slice() ?? []).sort((a, b
 export const sortMembers = (members: GuildMember[]) => (members?.slice() ?? []).sort((a, b) => (getMemberDisplayName(a)).localeCompare(getMemberDisplayName(b)));
 
 
-export const filterPredicateGuild = (guild: OAuthGuild | APIRole, keyword: string) => keyword.length < 1
+export const filterPredicateGuild = (guild: OAuthGuild | APIGuild, keyword: string) => keyword.length < 1
     || guild.id.includes(keyword)
     || guild.name.toLowerCase().includes(keyword.toLowerCase());
 

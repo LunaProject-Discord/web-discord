@@ -10,16 +10,6 @@ export const buildCdnUrl = (path: string, size?: number, format?: CdnImageFormat
     CDN_BASE_URL
 ).toString();
 
-export const getUserAvatar = (user: OAuthUser | APIUser, size?: number, format?: CdnImageFormat) => user.avatar ? buildCdnUrl(
-    `/avatars/${user.id}/${user.avatar}`,
-    size,
-    format
-) : buildCdnUrl(
-    `/embed/avatars/${Number(user.discriminator) % 5}`,
-    undefined,
-    'png'
-);
-
 export const getGuildIcon = (guild: OAuthGuild | APIGuild, size?: number, format?: CdnImageFormat) => guild.icon ? buildCdnUrl(
     `/icons/${guild.id}/${guild.icon}`,
     size,
@@ -30,12 +20,22 @@ export const getGuildIcon = (guild: OAuthGuild | APIGuild, size?: number, format
     'png'
 );
 
-export const getMemberAvatar = (member: GuildMember, guild: OAuthGuild | APIGuild, size?: number, format?: CdnImageFormat) => member.avatar ? buildCdnUrl(
-    `/guilds/${guild.id}/users/${member.user.id}/avatars/${member.avatar}.png`,
+export const getMemberAvatar = (member: GuildMember, guild: OAuthGuild | APIGuild | string, size?: number, format?: CdnImageFormat) => member.avatar ? buildCdnUrl(
+    `/guilds/${typeof guild === 'object' ? guild.id : guild}/users/${member.user.id}/avatars/${member.avatar}`,
     size,
     format
 ) : getUserAvatar(
     member.user,
     size,
     format
+);
+
+export const getUserAvatar = (user: OAuthUser | APIUser, size?: number, format?: CdnImageFormat) => user.avatar ? buildCdnUrl(
+    `/avatars/${user.id}/${user.avatar}`,
+    size,
+    format
+) : buildCdnUrl(
+    `/embed/avatars/${Number(user.discriminator) === 0 ? ((BigInt(user.id) >> 22n) % 5n) : Number(user.discriminator) % 5}`,
+    undefined,
+    'png'
 );
