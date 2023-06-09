@@ -19,13 +19,13 @@
         "build": "tsc"
     },
     "devDependencies": {
-        "@discordjs/rest": "1.7.0",
+        "@discordjs/rest": "1.7.1",
         "@types/color": "3.0.3",
-        "@types/node": "18.16.1",
+        "@types/node": "18.16.16",
         "color": "4.2.3",
-        "date-fns": "2.29.3",
-        "discord-api-types": "0.37.40",
-        "ts-loader": "9.4.2",
+        "date-fns": "2.30.0",
+        "discord-api-types": "0.37.43",
+        "ts-loader": "9.4.3",
         "ts-node": "10.9.1",
         "tslint": "6.1.3",
         "typescript": "5.0.4"

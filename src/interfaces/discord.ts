@@ -13,6 +13,7 @@ import {
 export interface OAuthUser {
     id: string;
     username: string;
+    global_name: string | null;
     discriminator: string;
     avatar?: string;
     avatar_decoration?: string;
