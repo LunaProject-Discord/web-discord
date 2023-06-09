@@ -29,7 +29,6 @@ export interface OAuthUser {
     premium_type?: number;
     email?: string;
     mfa_enabled?: boolean;
-
 }
 
 export interface OAuthGuild {
