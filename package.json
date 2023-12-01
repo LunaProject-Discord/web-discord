@@ -1,16 +1,13 @@
 {
-    "name": "@lunaproject-discord/web-discord",
+    "name": "@lunaproject/web-discord",
     "version": "1.1.0",
-    "packageManager": "yarn@3.5.0",
+    "packageManager": "yarn@4.0.2",
     "volta": {
-        "node": "18.16.0",
-        "yarn": "3.5.0"
+        "node": "18.17.1",
+        "yarn": "4.0.2"
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com"
-    },
     "repository": {
         "type": "git",
         "url": "https://github.com/LunaProject-Discord/web-discord.git"
