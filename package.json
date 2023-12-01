@@ -22,7 +22,7 @@
         "@types/node": "18.16.20",
         "color": "4.2.3",
         "date-fns": "2.30.0",
-        "discord-api-types": "0.37.60",
+        "discord-api-types": "0.37.65",
         "ts-loader": "9.5.0",
         "ts-node": "10.9.1",
         "tslint": "6.1.3",
