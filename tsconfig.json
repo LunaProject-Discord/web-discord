@@ -28,9 +28,6 @@
         "target": "es2020",
         "typeRoots": [
             "src/@types"
-        ],
-        "types": [
-            "node"
         ]
     },
     "exclude": [
