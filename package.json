@@ -19,7 +19,7 @@
     "devDependencies": {
         "@discordjs/rest": "2.2.0",
         "@types/color": "3.0.6",
-        "@types/node": "18.16.20",
+        "@types/node": "20.11.30",
         "color": "4.2.3",
         "date-fns": "3.6.0",
         "discord-api-types": "0.37.79",
