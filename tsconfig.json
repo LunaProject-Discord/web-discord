@@ -21,6 +21,11 @@
         "noImplicitAny": true,
         "noImplicitThis": true,
         "outDir": "./dist",
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
         "resolveJsonModule": true,
         "skipLibCheck": true,
         "strict": true,
@@ -35,6 +40,7 @@
         "node_modules/**/*"
     ],
     "include": [
+        "next-env.d.ts",
         "src/**/*"
     ],
     "ts-node": {
