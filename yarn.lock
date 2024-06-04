@@ -301,24 +301,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lunaproject/web-core@npm:^1.6.0-beta.49":
-  version: 1.6.0-beta.49
-  resolution: "@lunaproject/web-core@npm:1.6.0-beta.49"
+"@lunaproject/web-core@npm:^1.6.0-beta.53":
+  version: 1.6.0-beta.53
+  resolution: "@lunaproject/web-core@npm:1.6.0-beta.53"
   dependencies:
-    "@lunaproject/web-discord": "npm:^1.1.4"
     "@types/color": "npm:^3.0.6"
     "@types/deep-equal": "npm:^1.0.4"
     clsx: "npm:^2.1.0"
-    color: "npm:^4.2.3"
     date-fns: "npm:^3.6.0"
     deep-equal: "npm:^2.2.3"
     deepmerge: "npm:^4.3.1"
-    highlight.js: "npm:10.7.3"
     jotai: "npm:^2.8.0"
     nookies: "npm:^2.5.2"
     polished: "npm:^4.3.1"
     react-spring-bottom-sheet: "npm:^3.4.1"
-    simple-markdown: "npm:^0.7.3"
   peerDependencies:
     "@emotion/react": ^11.11.0
     "@emotion/styled": ^11.11.0
@@ -340,18 +336,18 @@ __metadata:
       optional: true
     "@types/react-dom":
       optional: true
-  checksum: 10c0/a5285e718871b0b2ab9a59c7ad0f46e94363d26158f879541084c3598a94b97129f7b6b1b389211349ad9f2b119b3d37448154e4cfa7f956ad3ab129bb08405a
+  checksum: 10c0/69ae1b2204519e6083b2aa212277f91094179d3df07a0383eeaac23b843b3adb8d366d953d59e5299f203ae5191f698b75725c4cf4570c280b4659381ccea579
   languageName: node
   linkType: hard
 
-"@lunaproject/web-discord@npm:^1.1.4, @lunaproject/web-discord@workspace:.":
+"@lunaproject/web-discord@workspace:.":
   version: 0.0.0-use.local
   resolution: "@lunaproject/web-discord@workspace:."
   dependencies:
     "@discordjs/rest": "npm:^2.2.0"
     "@emotion/react": "npm:^11.11.4"
     "@emotion/styled": "npm:^11.11.5"
-    "@lunaproject/web-core": "npm:^1.6.0-beta.49"
+    "@lunaproject/web-core": "npm:^1.6.0-beta.53"
     "@types/color": "npm:^3.0.6"
     "@types/node": "npm:~20.11.30"
     "@types/react": "npm:18.2.64"
@@ -359,7 +355,7 @@ __metadata:
     clsx: "npm:^2.1.0"
     color: "npm:^4.2.3"
     date-fns: "npm:^3.6.0"
-    discord-api-types: "npm:^0.37.79"
+    discord-api-types: "npm:^0.37.87"
     highlight.js: "npm:10.7.3"
     next: "npm:^14.2.0"
     polished: "npm:^4.3.1"
@@ -375,6 +371,7 @@ __metadata:
     "@emotion/styled": ^11.11.0
     "@types/react": ^18.2.0
     "@types/react-dom": ^18.2.0
+    next: ^14.2.0
     react: ^18.2.0
     react-dom: ^18.2.0
   peerDependenciesMeta:
@@ -1040,10 +1037,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord-api-types@npm:^0.37.79":
-  version: 0.37.79
-  resolution: "discord-api-types@npm:0.37.79"
-  checksum: 10c0/1f8d9d7ee76c06faab213a1a0c9ca4f252f8cc3b959f8338416e793c32fec8676c6ef451fd5b73d19fbd0783d08b901b533b178b3564e89170c0ed38dfdce440
+"discord-api-types@npm:^0.37.87":
+  version: 0.37.87
+  resolution: "discord-api-types@npm:0.37.87"
+  checksum: 10c0/d29ce407fb504ce6321ddad5a10a0e487593f5fb8ba84dffb2d92c06a662e8b55cc29e3339b285a307c830ad2a256bf85f5e3d9fb455ac026bdb5f779c261375
   languageName: node
   linkType: hard
 

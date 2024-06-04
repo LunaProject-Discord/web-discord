@@ -18,12 +18,12 @@
     },
     "dependencies": {
         "@discordjs/rest": "^2.2.0",
-        "@lunaproject/web-core": "^1.6.0-beta.49",
+        "@lunaproject/web-core": "^1.6.0-beta.53",
         "@types/color": "^3.0.6",
         "clsx": "^2.1.0",
         "color": "^4.2.3",
         "date-fns": "^3.6.0",
-        "discord-api-types": "^0.37.79",
+        "discord-api-types": "^0.37.87",
         "highlight.js": "10.7.3",
         "polished": "^4.3.1",
         "simple-markdown": "^0.7.3"
