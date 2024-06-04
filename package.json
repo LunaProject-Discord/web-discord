@@ -17,7 +17,7 @@
         "build": "tsc"
     },
     "dependencies": {
-        "@discordjs/rest": "^2.2.0",
+        "@discordjs/rest": "^2.3.0",
         "@lunaproject/web-core": "^1.6.0-beta.53",
         "@types/color": "^3.0.6",
         "clsx": "^2.1.0",
