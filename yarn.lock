@@ -348,7 +348,7 @@ __metadata:
     clsx: "npm:^2.1.0"
     color: "npm:^4.2.3"
     date-fns: "npm:^3.6.0"
-    discord-api-types: "npm:^0.37.87"
+    discord-api-types: "npm:^0.37.83"
     highlight.js: "npm:10.7.3"
     next: "npm:^14.2.0"
     polished: "npm:^4.3.1"
@@ -1030,7 +1030,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord-api-types@npm:^0.37.87":
+"discord-api-types@npm:^0.37.83":
   version: 0.37.87
   resolution: "discord-api-types@npm:0.37.87"
   checksum: 10c0/d29ce407fb504ce6321ddad5a10a0e487593f5fb8ba84dffb2d92c06a662e8b55cc29e3339b285a307c830ad2a256bf85f5e3d9fb455ac026bdb5f779c261375
