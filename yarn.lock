@@ -294,9 +294,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lunaproject/web-core@npm:^1.6.0-beta.53":
-  version: 1.6.0-beta.53
-  resolution: "@lunaproject/web-core@npm:1.6.0-beta.53"
+"@lunaproject/web-core@npm:^1.6.0-beta.54":
+  version: 1.6.0-beta.54
+  resolution: "@lunaproject/web-core@npm:1.6.0-beta.54"
   dependencies:
     "@types/color": "npm:^3.0.6"
     "@types/deep-equal": "npm:^1.0.4"
@@ -329,7 +329,7 @@ __metadata:
       optional: true
     "@types/react-dom":
       optional: true
-  checksum: 10c0/69ae1b2204519e6083b2aa212277f91094179d3df07a0383eeaac23b843b3adb8d366d953d59e5299f203ae5191f698b75725c4cf4570c280b4659381ccea579
+  checksum: 10c0/f197f9a3ef8b5a45d3c0aa04e997be345e0fa74a12eb362a51a016ef8b0e5eb5a942e0f158eae64bb9fbb27749e7b76e552cd9d3cd6cbf9c1f3215a77ec9dbf1
   languageName: node
   linkType: hard
 
@@ -340,7 +340,7 @@ __metadata:
     "@discordjs/rest": "npm:^2.3.0"
     "@emotion/react": "npm:^11.11.4"
     "@emotion/styled": "npm:^11.11.5"
-    "@lunaproject/web-core": "npm:^1.6.0-beta.53"
+    "@lunaproject/web-core": "npm:^1.6.0-beta.54"
     "@types/color": "npm:^3.0.6"
     "@types/node": "npm:~20.11.30"
     "@types/react": "npm:18.2.64"
