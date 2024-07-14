@@ -14,7 +14,7 @@
         "url": "https://github.com/LunaProject-Discord/web-discord.git"
     },
     "scripts": {
-        "build": "tsc"
+        "build": "tsc && mkdir dist/@types && cp src/@types/* dist/@types/"
     },
     "dependencies": {
         "@discordjs/rest": "^2.3.0",
