@@ -62,6 +62,7 @@
         "directory": "dist"
     },
     "files": [
-        "dist"
+        "dist",
+        "static"
     ]
 }
