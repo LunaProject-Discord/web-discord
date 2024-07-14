@@ -1,6 +1,6 @@
 {
     "name": "@lunaproject/web-discord",
-    "version": "1.1.16",
+    "version": "1.1.17",
     "license": "GPL-3.0",
     "packageManager": "yarn@4.3.1",
     "volta": {
