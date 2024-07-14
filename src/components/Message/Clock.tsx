@@ -1,7 +1,7 @@
 import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { formatTimestamp } from '@lunaproject/web-core/dist/utils';
-import { isValid } from 'date-fns';
+import { isValid } from 'date-fns/isValid';
 import { rem } from 'polished';
 import React, { useCallback, useEffect, useState } from 'react';
 

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { formatTimestamp } from '@lunaproject/web-core/dist/utils';
 import clsx from 'clsx';
-import { isValid } from 'date-fns';
+import { isValid } from 'date-fns/isValid';
 import { rem, size } from 'polished';
 import React, { ComponentProps } from 'react';
 import { Embed } from '../../../interfaces';

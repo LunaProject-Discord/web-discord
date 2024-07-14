@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import clsx from 'clsx';
 import Color from 'color';
-import { isValid } from 'date-fns';
+import { isValid } from 'date-fns/isValid';
 import { rem } from 'polished';
 import React, { ComponentProps, useEffect, useRef } from 'react';
 import { Embed } from '../../../interfaces';

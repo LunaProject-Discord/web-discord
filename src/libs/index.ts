@@ -1,5 +1,5 @@
 import { REST } from '@discordjs/rest';
-import { addSeconds } from 'date-fns';
+import { addSeconds } from 'date-fns/addSeconds';
 import { APIGuildMember, APIRole, Routes } from 'discord-api-types/v10';
 import { APIGuildChannel, Cache, OAuthGuild, OAuthUser } from '../interfaces';
 
