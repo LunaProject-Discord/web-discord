@@ -301,6 +301,3 @@ thumb
 sketch
 
 # End of https://www.toptal.com/developers/gitignore/api/yarn,intellij,node,nextjs,react
-
-.npmrc
-.yarnrc.yml
