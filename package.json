@@ -30,7 +30,7 @@
     "devDependencies": {
         "@emotion/react": "^11.13.3",
         "@emotion/styled": "^11.13.0",
-        "@lunaproject/web-core": "^2.0.0-beta.0",
+        "@lunaproject/web-core": "^2.0.0-beta.4",
         "@types/node": "~20.11.30",
         "@types/react": "18.3.3",
         "@types/react-dom": "18.3.0",

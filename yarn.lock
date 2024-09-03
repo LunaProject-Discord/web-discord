@@ -261,9 +261,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lunaproject/web-core@npm:^2.0.0-beta.0":
-  version: 2.0.0-beta.0
-  resolution: "@lunaproject/web-core@npm:2.0.0-beta.0"
+"@lunaproject/web-core@npm:^2.0.0-beta.4":
+  version: 2.0.0-beta.4
+  resolution: "@lunaproject/web-core@npm:2.0.0-beta.4"
   dependencies:
     "@types/color": "npm:^3.0.6"
     "@types/deep-equal": "npm:^1.0.4"
@@ -271,7 +271,7 @@ __metadata:
     date-fns: "npm:^3.6.0"
     deep-equal: "npm:^2.2.3"
     deepmerge: "npm:^4.3.1"
-    jotai: "npm:^2.9.0"
+    jotai: "npm:^2.9.3"
     nookies: "npm:^2.5.2"
     polished: "npm:^4.3.1"
     react-spring-bottom-sheet: "npm:^3.4.1"
@@ -279,7 +279,7 @@ __metadata:
     "@emotion/react": ^11.13.0
     "@emotion/styled": ^11.13.0
     "@mui/icons-material": ^6.0.0
-    "@mui/lab": ^6.0.0-beta.8
+    "@mui/lab": ^6.0.0-beta.9
     "@mui/material": ^6.0.0
     "@mui/x-date-pickers": ^7.15.0
     "@types/react": ^18.2.0 || ^18.3.0
@@ -296,7 +296,7 @@ __metadata:
       optional: true
     "@types/react-dom":
       optional: true
-  checksum: 10c0/87aab90cd13d5506ac052ebe1b43421b3f9a0754b9963784cec84d044a9c2dd5137b25d583dfc4ffe2e25df3c95dc53ae618958dfe96adbe2a9bf9b7342ad98f
+  checksum: 10c0/fa0bd0965262c96acbe8d50b8d2c09d53755b2021507c0d91744986dd146a42cef12707779ae2ff731a3c99ea08dd52b9977d49ab65355750c38b21f15c8b891
   languageName: node
   linkType: hard
 
@@ -307,7 +307,7 @@ __metadata:
     "@discordjs/rest": "npm:^2.3.0"
     "@emotion/react": "npm:^11.13.3"
     "@emotion/styled": "npm:^11.13.0"
-    "@lunaproject/web-core": "npm:^2.0.0-beta.0"
+    "@lunaproject/web-core": "npm:^2.0.0-beta.4"
     "@types/color": "npm:^3.0.6"
     "@types/node": "npm:~20.11.30"
     "@types/react": "npm:18.3.3"
@@ -1324,9 +1324,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jotai@npm:^2.9.0":
-  version: 2.9.0
-  resolution: "jotai@npm:2.9.0"
+"jotai@npm:^2.9.3":
+  version: 2.9.3
+  resolution: "jotai@npm:2.9.3"
   peerDependencies:
     "@types/react": ">=17.0.0"
     react: ">=17.0.0"
@@ -1335,7 +1335,7 @@ __metadata:
       optional: true
     react:
       optional: true
-  checksum: 10c0/c5551fb90933bcbc28b11cdb4af681398a12f8eb39a4a49568ec6ce5062c2257dd84a85cbfd7ec7d970d56dfa5023d16a0ec7056bc2697fdf9b3ec94da67c9d1
+  checksum: 10c0/d7a2aedeebd84f332b930c5dc06f6827c11a70c3b6bae0817e0c778f7c34996f3a47d5c544ff1b7ed2662083feed55ea6d77b281adf2e0fba65ad93b1723d687
   languageName: node
   linkType: hard
 
