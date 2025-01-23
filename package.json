@@ -59,6 +59,9 @@
             "optional": true
         }
     },
+    "resolutions": {
+        "@types/react": "18.3.18"
+    },
     "publishConfig": {
         "access": "public",
         "directory": "dist"
