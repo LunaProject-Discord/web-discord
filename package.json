@@ -17,12 +17,12 @@
         "build": "tsc && mkdir dist/@types && cp src/@types/* dist/@types/"
     },
     "dependencies": {
-        "@discordjs/rest": "^2.3.0",
+        "@discordjs/rest": "^2.4.2",
         "@types/color": "^3.0.6",
         "clsx": "^2.1.1",
         "color": "^4.2.3",
         "date-fns": "^3.6.0",
-        "discord-api-types": "0.37.90",
+        "discord-api-types": "^0.37.114",
         "highlight.js": "10.7.3",
         "polished": "^4.3.1",
         "simple-markdown": "^0.7.3"
@@ -34,7 +34,9 @@
         "@types/node": "~20.11.30",
         "@types/react": "18.3.3",
         "@types/react-dom": "18.3.0",
-        "next": "^14.2.7",
+        "eslint": "^8.57.1",
+        "eslint-config-next": "^14.2.22",
+        "next": "^14.2.22",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "tslint": "^6.1.3",

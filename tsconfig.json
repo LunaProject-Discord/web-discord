@@ -15,22 +15,18 @@
             "dom.iterable",
             "esnext"
         ],
-        "module": "commonjs",
+        "module": "esnext",
         "moduleResolution": "node",
         // "noEmit": true,
         "noImplicitAny": true,
         "noImplicitThis": true,
         "outDir": "./dist",
-        "plugins": [
-            {
-                "name": "next"
-            }
-        ],
+        "plugins": [],
         "resolveJsonModule": true,
         "skipLibCheck": true,
         "strict": true,
         "strictNullChecks": true,
-        "target": "es2020",
+        "target": "es2023",
         "typeRoots": [
             "src/@types"
         ]
@@ -42,11 +38,5 @@
     "include": [
         "next-env.d.ts",
         "src/**/*"
-    ],
-    "ts-node": {
-        "compilerOptions": {
-            "module": "commonjs",
-            "target": "es5"
-        }
-    }
+    ]
 }
