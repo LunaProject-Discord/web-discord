@@ -1,8 +1,19 @@
 import styled from '@emotion/styled';
 import { em, rem, size } from 'polished';
+import { ComponentPropsWithoutRef } from 'react';
 import { RichEmbedContainer } from '../../components';
+import React from 'react';
 
-const Emoji = styled('img')<{ big?: boolean }>(({ theme, big }) => ({
+const Emoji = styled(
+    ({ src, alt, ...props }: ComponentPropsWithoutRef<'img'>) => (
+        <img
+            src={src}
+            alt={alt}
+            draggable={false}
+            {...props}
+        />
+    )
+)<{ big?: boolean }>(({ theme, big }) => ({
     display: 'inline',
     ...size(em(22)),
     objectFit: 'contain',
@@ -15,9 +26,5 @@ const Emoji = styled('img')<{ big?: boolean }>(({ theme, big }) => ({
         ...size(18)
     }
 }));
-
-Emoji.defaultProps = {
-    draggable: false
-};
 
 export { Emoji };

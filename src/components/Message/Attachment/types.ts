@@ -1,3 +1,4 @@
+import { JSX } from 'react';
 import type { AttachmentType } from './AttachmentType';
 import {
     acrobat,
