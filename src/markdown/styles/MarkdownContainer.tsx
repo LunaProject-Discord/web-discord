@@ -1,11 +1,14 @@
 import styled from '@emotion/styled';
+import { generateComponentClasses } from '@lunaproject/web-core/dist/utils';
 import clsx from 'clsx';
 import React, { ComponentProps } from 'react';
 
-const markdownContainerClassPrefix = 'MarkdownContainer';
-export const markdownContainerClasses = {
-    root: `${markdownContainerClassPrefix}-root`
-};
+export const markdownContainerClasses = generateComponentClasses(
+    'MarkdownContainer',
+    [
+        'root'
+    ]
+);
 
 export const MarkdownContainer = styled(
     ({ className, ...props }: ComponentProps<'div'>) => (

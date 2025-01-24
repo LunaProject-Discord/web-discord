@@ -1,16 +1,19 @@
 import styled from '@emotion/styled';
+import { generateComponentClasses } from '@lunaproject/web-core/dist/utils';
 import clsx from 'clsx';
 import { rem, size } from 'polished';
 import React, { ComponentProps } from 'react';
 import { Embed } from '../../../interfaces';
 
-const richEmbedAuthorClassPrefix = 'RichEmbedAuthor';
-export const richEmbedAuthorClasses = {
-    root: `${richEmbedAuthorClassPrefix}-root`,
-    icon: `${richEmbedAuthorClassPrefix}-icon`,
-    name: `${richEmbedAuthorClassPrefix}-name`,
-    nameLink: `${richEmbedAuthorClassPrefix}-nameLink`
-};
+export const richEmbedAuthorClasses = generateComponentClasses(
+    'RichEmbedAuthor',
+    [
+        'root',
+        'icon',
+        'name',
+        'nameLink'
+    ]
+);
 
 export const RichEmbedAuthorRoot = styled(
     ({ className, ...props }: ComponentProps<'div'>) => (
@@ -82,7 +85,7 @@ export interface RichEmbedAuthorProps {
 
 export const RichEmbedAuthor = ({ embed: { author: { name, url, iconUrl } } }: RichEmbedAuthorProps) => (
     <RichEmbedAuthorRoot>
-        {iconUrl && <RichEmbedAuthorIcon src={iconUrl} alt="Author image" />}
+        {iconUrl && <RichEmbedAuthorIcon src={iconUrl} alt="Author icon" />}
         {name && (url ? <RichEmbedAuthorNameLink
             href={url}
             target="_blank"

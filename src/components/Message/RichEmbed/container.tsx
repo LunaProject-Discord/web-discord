@@ -1,11 +1,14 @@
 import styled from '@emotion/styled';
+import { generateComponentClasses } from '@lunaproject/web-core/dist/utils';
 import clsx from 'clsx';
 import React, { ComponentProps } from 'react';
 
-const richEmbedContainerClassPrefix = 'RichEmbedContainer';
-export const richEmbedContainerClasses = {
-    root: `${richEmbedContainerClassPrefix}-root`
-};
+export const richEmbedContainerClasses = generateComponentClasses(
+    'RichEmbedContainer',
+    [
+        'root'
+    ]
+);
 
 export const RichEmbedContainer = styled(
     ({ className, ...props }: ComponentProps<'div'>) => (

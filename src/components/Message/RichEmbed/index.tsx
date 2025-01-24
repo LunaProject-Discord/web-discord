@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { generateComponentClasses } from '@lunaproject/web-core/dist/utils';
 import clsx from 'clsx';
 import Color from 'color';
 import { isValid } from 'date-fns/isValid';
@@ -12,20 +13,22 @@ import { RichEmbedField } from './field';
 import { RichEmbedFooter } from './footer';
 import { RichEmbedGallery } from './gallery';
 
-const richEmbedClassPrefix = 'RichEmbed';
-export const richEmbedClasses = {
-    root: `${richEmbedClassPrefix}-root`,
-    titleRoot: `${richEmbedClassPrefix}-titleRoot`,
-    title: `${richEmbedClassPrefix}-title`,
-    titleLinkRoot: `${richEmbedClassPrefix}-titleLinkRoot`,
-    titleLink: `${richEmbedClassPrefix}-titleLink`,
-    descriptionRoot: `${richEmbedClassPrefix}-descriptionRoot`,
-    description: `${richEmbedClassPrefix}-description`,
-    fields: `${richEmbedClassPrefix}-fields`,
-    image: `${richEmbedClassPrefix}-image`,
-    thumbnailRoot: `${richEmbedClassPrefix}-thumbnailRoot`,
-    thumbnail: `${richEmbedClassPrefix}-thumbnail`
-};
+export const richEmbedClasses = generateComponentClasses(
+    'RichEmbed',
+    [
+        'root',
+        'titleRoot',
+        'title',
+        'titleLinkRoot',
+        'titleLink',
+        'descriptionRoot',
+        'description',
+        'fields',
+        'image',
+        'thumbnailRoot',
+        'thumbnail'
+    ]
+);
 
 export const RichEmbedRoot = styled(
     ({ className, ...props }: ComponentProps<'div'>) => (

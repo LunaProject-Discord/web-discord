@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { em, rem } from 'polished';
-import { RichEmbedContainer } from '../../components';
+import { RichEmbedContainer, richEmbedContainerClasses } from '../../components';
 
 export const Code = styled('code')(({ theme }) => ({
     margin: `${em(-3.2)} 0`,
@@ -10,7 +10,7 @@ export const Code = styled('code')(({ theme }) => ({
     whiteSpace: 'pre-wrap',
     background: theme.background.secondary,
     borderRadius: 3,
-    [`${RichEmbedContainer} &&, .RichEmbedContainer-root &&`]: {
+    [`.${richEmbedContainerClasses.root} &&`]: {
         background: theme.background.tertiary
     }
 }));

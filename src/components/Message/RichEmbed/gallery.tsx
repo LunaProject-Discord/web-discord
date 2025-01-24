@@ -1,15 +1,18 @@
 import styled from '@emotion/styled';
+import { generateComponentClasses } from '@lunaproject/web-core/dist/utils';
 import clsx from 'clsx';
 import { size } from 'polished';
 import React, { ComponentProps } from 'react';
 import { Embed } from '../../../interfaces';
 
-const richEmbedGalleryClassPrefix = 'RichEmbedGallery';
-export const richEmbedGalleryClasses = {
-    root: `${richEmbedGalleryClassPrefix}-root`,
-    cell: `${richEmbedGalleryClassPrefix}-cell`,
-    image: `${richEmbedGalleryClassPrefix}-image`
-};
+export const richEmbedGalleryClasses = generateComponentClasses(
+    'RichEmbedGallery',
+    [
+        'root',
+        'cell',
+        'image'
+    ]
+);
 
 export const RichEmbedGalleryRoot = styled(
     ({ className, ...props }: ComponentProps<'div'>) => (

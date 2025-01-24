@@ -1,19 +1,21 @@
 import styled from '@emotion/styled';
-import { formatTimestamp } from '@lunaproject/web-core/dist/utils';
+import { formatTimestamp, generateComponentClasses } from '@lunaproject/web-core/dist/utils';
 import clsx from 'clsx';
 import { isValid } from 'date-fns/isValid';
 import { rem, size } from 'polished';
 import React, { ComponentProps } from 'react';
 import { Embed } from '../../../interfaces';
 
-const richEmbedFooterClassPrefix = 'RichEmbedFooter';
-export const richEmbedFooterClasses = {
-    root: `${richEmbedFooterClassPrefix}-root`,
-    icon: `${richEmbedFooterClassPrefix}-icon`,
-    text: `${richEmbedFooterClassPrefix}-text`,
-    separator: `${richEmbedFooterClassPrefix}-separator`,
-    timestamp: `${richEmbedFooterClassPrefix}-timestamp`
-};
+export const richEmbedFooterClasses = generateComponentClasses(
+    'RichEmbedFooter',
+    [
+        'root',
+        'icon',
+        'text',
+        'separator',
+        'timestamp'
+    ]
+);
 
 export const RichEmbedFooterRoot = styled(
     ({ className, ...props }: ComponentProps<'div'>) => (
@@ -34,7 +36,7 @@ export const RichEmbedFooterRoot = styled(
     })
 }));
 
-export const RichEmbedFooterImage = styled(
+export const RichEmbedFooterIcon = styled(
     ({ className, ...props }: ComponentProps<'img'>) => (
         <img
             className={clsx(richEmbedFooterClasses.icon, className)}
@@ -86,7 +88,7 @@ export interface RichEmbedFooterProps {
 
 export const RichEmbedFooter = ({ embed: { image, footer: { text, iconUrl }, timestamp } }: RichEmbedFooterProps) => (
     <RichEmbedFooterRoot thumbnail={Boolean(image?.thumbnail)}>
-        {iconUrl && <RichEmbedFooterImage src={iconUrl} alt="Footer image" />}
+        {iconUrl && <RichEmbedFooterIcon src={iconUrl} alt="Footer icon" />}
         <RichEmbedFooterText>
             {text}
             {text && timestamp && isValid(timestamp) && <RichEmbedFooterSeparator>•</RichEmbedFooterSeparator>}

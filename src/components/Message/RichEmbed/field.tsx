@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { generateComponentClasses } from '@lunaproject/web-core/dist/utils';
 import clsx from 'clsx';
 import { rem } from 'polished';
 import React, { ComponentProps } from 'react';
@@ -6,14 +7,16 @@ import { Embed, EmbedField as Field } from '../../../interfaces';
 import { getFieldGridColumn } from '../../../libs';
 import { Markdown, markdownContainerClasses } from '../../../markdown';
 
-const richEmbedFieldClassPrefix = 'RichEmbedField';
-export const richEmbedFieldClasses = {
-    root: `${richEmbedFieldClassPrefix}-root`,
-    nameRoot: `${richEmbedFieldClassPrefix}-nameRoot`,
-    name: `${richEmbedFieldClassPrefix}-name`,
-    valueRoot: `${richEmbedFieldClassPrefix}-valueRoot`,
-    value: `${richEmbedFieldClassPrefix}-value`
-};
+export const richEmbedFieldClasses = generateComponentClasses(
+    'RichEmbedField',
+    [
+        'root',
+        'nameRoot',
+        'name',
+        'valueRoot',
+        'value'
+    ]
+);
 
 export const RichEmbedFieldRoot = styled(
     ({ className, ...props }: ComponentProps<'div'>) => (

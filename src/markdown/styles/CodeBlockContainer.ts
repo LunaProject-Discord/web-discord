@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { em, rem } from 'polished';
-import { RichEmbedContainer } from '../../components';
+import { richEmbedContainerClasses } from '../../components';
 
 export const CodeBlockContainer = styled.pre`
     max-width: 90%;
@@ -15,7 +15,7 @@ export const CodeBlockContainer = styled.pre`
     border: solid 1px ${({ theme }) => theme.background.tertiary};
     border-radius: 4px;
 
-    ${RichEmbedContainer} &&, .RichEmbedContainer-root && {
+    .${richEmbedContainerClasses.root} && {
         max-width: 100%;
         background: ${({ theme }) => theme.background.tertiary};
         border: none;
