@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import { em, rem, size } from 'polished';
 import React, { ComponentPropsWithoutRef } from 'react';
-import { richEmbedContainerClasses } from '../../components';
 
 const Emoji = styled(
     ({ src, alt, ...props }: ComponentPropsWithoutRef<'img'>) => (
@@ -21,7 +20,7 @@ const Emoji = styled(
         ...size(rem(48)),
         minHeight: rem(48)
     }),
-    [`.${richEmbedContainerClasses.root} &`]: {
+    [`.RichEmbedContainer-root &`]: {
         ...size(18)
     }
 }));

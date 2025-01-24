@@ -21,7 +21,11 @@
         "noImplicitAny": true,
         "noImplicitThis": true,
         "outDir": "./dist",
-        "plugins": [],
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
         "resolveJsonModule": true,
         "skipLibCheck": true,
         "strict": true,

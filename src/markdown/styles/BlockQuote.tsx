@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import React, { ReactNode } from 'react';
-import { richEmbedContainerClasses } from '../../components';
 
 const BlockQuoteContainer = styled('div')({
     display: 'flex'
@@ -19,7 +18,7 @@ const BlockQuoteContent = styled('blockquote')({
     paddingLeft: 12,
     paddingRight: 8,
     textIndent: 0,
-    [`.${richEmbedContainerClasses.root} &`]: {
+    [`.RichEmbedContainer-root &`]: {
         maxWidth: '100%'
     }
 });
