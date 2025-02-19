@@ -1,4 +1,4 @@
-import Color from 'color';
+import Color, { ColorInstance } from 'color';
 
 export interface Message {
     content: string;
@@ -19,7 +19,7 @@ export interface Embed {
     title: string;
     description: string;
     url: string;
-    color: Color;
+    color: ColorInstance;
     timestamp: Date | null;
     author: EmbedAuthor;
     fields: EmbedField[];
